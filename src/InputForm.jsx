@@ -76,20 +76,35 @@ function InputForm()
                 
                 <label>
                     Gender:
-                    <input
-                    type="radio"
-                    name="gender"
-                    value="Male"
-                    checked={formData.gender === 'Male'}
-                    onChange={handleGenderChange}
-                    /> Male
-                    <input
-                    type="radio"
-                    name="gender"
-                    value="Female"
-                    checked={formData.gender === 'Female'}
-                    onChange={handleGenderChange}
-                    /> Female
+                    <div style={{display:'flex',justifyContent:"space-around",flexDirection:"row-reverse"}}>
+                      <div>
+                        <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                        checked={formData.gender === 'Male'}
+                        onChange={handleGenderChange}
+                        />  
+                      </div>
+                      <div>
+                        Male
+                      </div>
+                    </div>
+                    <div style={{display:'flex',justifyContent:"space-around",flexDirection:"row-reverse"}}>
+                      <div>
+                        <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        checked={formData.gender === 'Female'}
+                        onChange={handleGenderChange}
+                        /> 
+                      </div>
+                      <div>
+                        Female
+                      </div>
+                    </div>
+                    
                 </label>
 
                 <label>
