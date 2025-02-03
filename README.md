@@ -15,63 +15,27 @@ Churn Predictor is a web-based application that predicts customer churn based on
 - MinMax Scaler for normalizing user inputs.
 - Results displayed as an alert message on the frontend.
 
-## Project Structure
-```
-churn-predictor/
-│── frontend/        # React.js frontend
-│── backend/         # Flask backend
-│── model/           # Jupyter Notebook and ML model files
-│── requirements.txt # Dependencies for the Flask backend
-│── README.md        # Project documentation
-```
 
 ## Setup Instructions
 ### Prerequisites
 Ensure you have the following installed:
 - Node.js & npm (for the React frontend)
 - Python & pip (for the Flask backend)
+- also make sure to run the server.py once and download all the necessary libraries such as flask, cors.etc 
 
-### Backend Setup
-1. Navigate to the backend directory:
+## Procedure
+1. Run the server.py (Flask Backend):
    ```sh
-   cd backend
+   python server.py
    ```
-2. Create a virtual environment and activate it:
+2. Now run the front-end react program.
    ```sh
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   npm run dev
    ```
-3. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-4. Run the Flask backend:
-   ```sh
-   python app.py
-   ```
-
-### Frontend Setup
-1. Navigate to the frontend directory:
-   ```sh
-   cd frontend
-   ```
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
-3. Start the React application:
-   ```sh
-   npm start
-   ```
-
-## How It Works
-1. User fills out the form with 12 inputs.
-2. Data is sent to the Flask backend.
-3. Flask loads two pickle files:
-   - **MinMax Scaler:** Normalizes input data.
-   - **Best Algorithm Model:** Predicts churn probability.
-4. Prediction result is sent back to the frontend and displayed as an alert message.
-
+3. Now the web app would be rendered with a form consisting of several fields for user to input in.
+4. After filling the form with the input, click submit.
+5. The submit would take the input from the front-end, would be processed by the ML algorithm in the backend, and would return a message in the alert form in the screen.
+ 
 ## Future Enhancements
 - Improve UI/UX for better user experience.
 - Store and visualize prediction results.
